@@ -1,0 +1,5 @@
+{:deps {org.clojure/clojure {:mvn/version "1.12.1"}
+        tick/tick {:mvn/version "1.0"}
+        cheshire/cheshire {:mvn/version "6.1.0"}
+        clj-http/clj-http   {:mvn/version "3.13.0"}
+        io.github.tonsky/clj-reload {:mvn/version "1.0.0"}}}
