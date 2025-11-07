@@ -6,7 +6,7 @@
 		"dockerfile": "Dockerfile",
 		"args": {
 			"BASE_IMAGE": "temurin-21-tools-deps-jammy",
-			"USERNAME": "vscode"
+			"USERNAME": "${localEnv:USER:vscode}"
 		}
 	},
 	"remoteUser": "${localEnv:USER}",
