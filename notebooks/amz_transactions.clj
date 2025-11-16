@@ -1,4 +1,4 @@
-(ns scratch.amz-transactions
+(ns notebooks.amz-transactions
   (:require
    [clj-http.client :as client]
    [clojure.edn :as edn]

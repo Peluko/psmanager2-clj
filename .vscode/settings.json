@@ -9,15 +9,16 @@
   // https://calva.io/connect-sequences/
   "calva.replConnectSequences": [
     {
-      "name": "The Get Started REPL",
+      "name": "PsManager REPL",
       "autoSelectForConnect": true,
       "autoSelectForJackIn": true,
       "projectRootPath": ["."],
       "cljsType": "none",
       "projectType": "deps.edn",
       "menuSelections": {
-        "cljAliases": ["test"]
-      }
+        "cljAliases": ["dev"]
+      },
+      "customJackInCommandLine": "clj -Sdeps '{:deps {nrepl/nrepl {:mvn/version, \"JACK-IN-NREPL-VERSION\"}, cider/cider-nrepl {:mvn/version, \"JACK-IN-CIDER-NREPL-VERSION\"}}}' -M:dev dev"
     }
   ],
 

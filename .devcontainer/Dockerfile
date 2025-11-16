@@ -15,6 +15,7 @@ ARG USER_GID=$USER_UID
 #     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
 #     && chmod 0440 /etc/sudoers.d/$USERNAME
 
+# ARG doesn't work right on 'winterfell-docker', so we have to put values inline
 RUN groupadd --gid 1000 vscode \
     && useradd --uid 1000 --gid 1000 -m vscode -s /bin/bash \
     #
