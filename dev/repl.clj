@@ -2,7 +2,10 @@
   (:require [psmanager :as main]
             [com.biffweb :as biff :refer [q]]
             [clojure.edn :as edn]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [nextjournal.clerk :as clerk]))
+
+(clerk/serve! {:browse true :watch-paths ["notebooks"]})
 
 ;; REPL-driven development
 ;; ----------------------------------------------------------------------------------------

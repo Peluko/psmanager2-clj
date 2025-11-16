@@ -7,8 +7,7 @@
    [malli.transform :as mt]
    [malli.error :as me]
    [malli.experimental.time :as met]
-   [malli.registry :as mr]
-   [clj-reload.core]))
+   [malli.registry :as mr]))
 
 (mr/set-default-registry!
  (mr/composite-registry
@@ -67,8 +66,6 @@
         e))))
 
 (comment
-
-  (clj-reload.core/reload)
 
   (def transactions (let [endpoint "/finances/2024-06-19/transactions"
                           query-params {:postedAfter "2025-11-01"
