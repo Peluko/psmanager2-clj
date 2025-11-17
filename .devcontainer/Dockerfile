@@ -6,24 +6,24 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
     
 # Create the user
-# RUN groupadd --gid $USER_GID $USERNAME \
-#     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME -s /bin/bash \
-#     #
-#     # [Optional] Add sudo support. Omit if you don't need to install software after connecting.
-#     && apt-get update \
-#     && apt-get install -y sudo \
-#     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
-#     && chmod 0440 /etc/sudoers.d/$USERNAME
-
-# ARG doesn't work right on 'winterfell-docker', so we have to put values inline
-RUN groupadd --gid 1000 vscode \
-    && useradd --uid 1000 --gid 1000 -m vscode -s /bin/bash \
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME -s /bin/bash \
     #
     # [Optional] Add sudo support. Omit if you don't need to install software after connecting.
     && apt-get update \
     && apt-get install -y sudo \
-    && echo vscode ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/vscode \
-    && chmod 0440 /etc/sudoers.d/vscode
+    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+    && chmod 0440 /etc/sudoers.d/$USERNAME
+
+# ARG doesn't work right on 'winterfell-docker', so we have to put values inline
+# RUN groupadd --gid 1000 vscode \
+#     && useradd --uid 1000 --gid 1000 -m vscode -s /bin/bash \
+#     #
+#     # [Optional] Add sudo support. Omit if you don't need to install software after connecting.
+#     && apt-get update \
+#     && apt-get install -y sudo \
+#     && echo vscode ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/vscode \
+#     && chmod 0440 /etc/sudoers.d/vscode
     
     
     
