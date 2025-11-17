@@ -42,4 +42,4 @@ clojure -Ttools list
 RUN sudo apt-get update && \
     sudo apt-get install -y lsb-release && \
     # For Clojure Clerk to work, it needs some X libraries
-    apt-get install -y libxrender1 libxtst6 libxi6
+    sudo apt-get install -y libxrender1 libxtst6 libxi6
