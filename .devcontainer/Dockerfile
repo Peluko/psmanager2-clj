@@ -40,4 +40,6 @@ clojure -Ttools install-latest :lib io.github.seancorfield/deps-new :as new && \
 clojure -Ttools list
 
 RUN sudo apt-get update && \
-    sudo apt-get install -y lsb-release
+    sudo apt-get install -y lsb-release && \
+    # For Clojure Clerk to work, it needs some X libraries
+    apt-get install -y libxrender1 libxtst6 libxi6
