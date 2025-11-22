@@ -1,0 +1,7 @@
+{:customREPLCommandSnippets [{:name "Show file in Clerk"
+                              :key "c"
+                              :snippet (nextjournal.clerk/show! "$file")}
+                             {:name "Eval repl.clj"
+                              :key "r"
+                              :snippet (load-file "dev/repl.clj")}]
+ :customREPLHoverSnippets []}

@@ -62,4 +62,22 @@
 
  ;; Uncomment this line if you have any ssh-related problems:
  ;; :biff.tasks/skip-ssh-agent true
- }
+
+ ;; Shopify
+ :psmanager.shopify/token             #biff/secret SHOPIFY_TOKEN
+
+ ;; Shipius
+ :psmanager.shipius/token             #biff/secret SHIPIUS_TOKEN
+
+ ;; Google Drive
+ :psmanager.drive/token               #biff/secret DRIVEAPI_TOKEN
+
+ ;; Correos
+ :psmanager.correos/user              #biff/secret CORREOS_USER
+ :psmanager.correos/pwd               #biff/secret CORREOS_PWD
+
+ ;; Amazon SP-API
+ :psmanager.amazon/auth-endpoint      "https://api.amazon.com/auth/o2/token"
+ :psmanager.amazon/client-id          #biff/secret AMAZON_CLIENT_ID
+ :psmanager.amazon/secret             #biff/secret AMAZON_SECRET
+ :psmanager.amazon/refresh-token      #biff/secret AMAZON_REFRESH_TOKEN}

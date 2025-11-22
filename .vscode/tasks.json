@@ -1,0 +1,15 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "TMux dev with NREPL",
+            "type": "shell",
+            "command": "tmux -f ${workspaceFolder}/.vscode/tmux.conf attach -t psmanager2-clj || tmux -f ${workspaceFolder}/.vscode/tmux.conf new-session -A -s psmmanager2-clj clj -Sdeps '{:deps {nrepl/nrepl {:mvn/version, \"1.5.1\"}, cider/cider-nrepl {:mvn/version, \"0.58.0\"}}}' -M:dev dev",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        }
+    ]
+}
